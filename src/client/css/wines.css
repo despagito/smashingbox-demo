@@ -1,0 +1,33 @@
+
+.wines__title {
+  text-align: center;
+}
+.wine__select__wrapper {
+  overflow: hidden;
+}
+.wine__select__year {
+  /* position: fixed;
+  right: 0; */
+  /* align-self: end; */
+  float: right;
+}
+.wines__list {
+  list-style: none;
+}
+.wine {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid #bbb;
+  margin-top: 20px;
+}
+.wine__image {
+  padding: 15px;
+}
+.wine__name {
+  font-size: 20px;
+  /* font-weight: bold; */
+}
+.wine__region {
+  color: #999;
+}
