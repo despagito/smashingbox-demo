@@ -1,0 +1,25 @@
+{
+  "wines": [{
+    "id": "f2ca57a5-d9da-4808-9164-8d6e0da0aef5",
+    "name": "Apothic Red",
+    "vintage": "2015",
+    "vineyard": "Apothic",
+    "type": "Red Blend",
+    "region": "California",
+    "unitsSold": 51,
+    "ratings": [{
+      "stars": 5
+    }, {
+      "stars": 3
+    }]
+  }, {
+    "id": "37f345b1-9f96-4eef-860e-24ab6360ebef",
+    "name": "Carson Ridge Cabernet Paso Robles",
+    "vintage": "2015",
+    "vineyard": "Carson Ridge",
+    "type": "Cabernet",
+    "region": "California",
+    "unitsSold": 19,
+    "ratings": []
+  }]
+}
