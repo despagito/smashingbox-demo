@@ -2,7 +2,7 @@ import * as React from 'react';
 import { bindActionCreators, Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import '../css/wines.css';
-import { winePlaceholder } from '../img/wine-placeholder.png';
+import * as winePlaceholder from '../img/wine-placeholder.png';
 import StarRatings from 'react-star-ratings';
 
 import * as actionCreators from '../actions/wineActions';
