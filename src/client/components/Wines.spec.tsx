@@ -8,10 +8,16 @@ describe('<Wines />', () => {
         const props = {
             wines:  [{
                 id: 1,
-                name: 'Pinot Noir'
+                name: 'Pinot Noir',
+                ratings: [
+                    {stars: 1},
+                ]
             }, {
                 id: 2,
-                name: 'Cabernet'
+                name: 'Cabernet',
+                ratings: [
+                    {stars: 3},
+                ]
             }],
             actions: {
                 fetchWines: () => console.log('fetchWines called')
@@ -22,5 +28,7 @@ describe('<Wines />', () => {
         expect(wrapper.find('.wine')).to.have.length(2);
         expect(wrapper.find('.wines__list').text()).to.contain('Pinot Noir');
         expect(wrapper.find('.wines__list').text()).to.contain('Cabernet');
+
+        expect(wrapper.find('.wines__rating')).to.have.length(1);
     });
 });
