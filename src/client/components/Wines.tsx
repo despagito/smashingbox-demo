@@ -7,6 +7,7 @@ import * as actionCreators from '../actions/wineActions';
 export class Wines extends React.PureComponent<any, any> {
     public componentDidMount() {
         this.props.actions.fetchWines();
+        console.log('this.props.wines', this.props.wines)
     }
 
     public render() {
