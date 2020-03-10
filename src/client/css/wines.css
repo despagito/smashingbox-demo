@@ -40,3 +40,7 @@
 .wine__region {
   color: #999;
 }
+.wine__rating {
+  position: relative;
+  top: 25px;
+}

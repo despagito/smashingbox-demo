@@ -1,13 +1,14 @@
 import * as React from 'react';
 import { bindActionCreators, Dispatch } from 'redux';
 import { connect } from 'react-redux';
-import '../css/wines.css'
-import { winePlaceholder } from '../img/wine-placeholder.png'
+import '../css/wines.css';
+import { winePlaceholder } from '../img/wine-placeholder.png';
+import StarRatings from 'react-star-ratings';
 
 import * as actionCreators from '../actions/wineActions';
 
 export class Wines extends React.PureComponent<any, any> {
-    public constructor(props) {
+    public constructor(props: object) {
         super(props)
         this.state = {
             wines: [],
@@ -99,7 +100,7 @@ export class Wines extends React.PureComponent<any, any> {
                                 const sum = wine.ratings.reduce((accumulator: number, current: object) => {
                                     return accumulator + current['stars']
                                 }, 0)
-                                meanRating = Math.floor(sum / wine.ratings.length)
+                                meanRating = sum / wine.ratings.length
                             }
                             return <li key={wine.name} className="wine">
                                 <img className="wine__image" src={winePlaceholder} alt="wine-picture" />
@@ -111,7 +112,15 @@ export class Wines extends React.PureComponent<any, any> {
                                         
                                     </div>
                                     <div className="wine__region">{wine.region}</div>
-                                    <div>RATING!!! { meanRating } ({wine.ratings.length})</div>
+                                    <div className="wine__rating">
+                                        <StarRatings
+                                            rating={meanRating} 
+                                            starDimension="25px"
+                                            starRatedColor="orange"
+                                            starSpacing="1px"
+                                        /> 
+                                        ({wine.ratings.length})
+                                    </div>
                                 </div>
                             </li>;
                         })
